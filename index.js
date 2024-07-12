@@ -39,7 +39,14 @@ db.on('error', (error) => console.log(error));
 db.once('open', () => console.log('Database Connected...'));
 app.use(express.json()); 
 app.use(cookieParser())
-app.use(cors());
+const corsOptions = {
+    origin: "https://your-frontend-domain.vercel.app", // замените на ваш домен Vercel
+    credentials: true,
+    optionsSuccessStatus: 200
+};
+
+
+app.use(cors(corsOptions));
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
