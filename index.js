@@ -40,7 +40,7 @@ db.once('open', () => console.log('Database Connected...'));
 app.use(express.json()); 
 app.use(cookieParser())
 const corsOptions = {
-    origin: "https://pet-house-fronted-7hn7kcrqh-viktoryanivs-projects.vercel.app", // замените на ваш домен Vercel
+    origin: "https://pet-house-fronted.vercel.app/", // замените на ваш домен Vercel
     credentials: true,
     optionsSuccessStatus: 200
 };
